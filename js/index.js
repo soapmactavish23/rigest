@@ -10,13 +10,13 @@ if (localStorage.getItem('token') && localStorage.getItem('token') !== 'undefine
     var menu = $.ajax({
         url: 'json/menu.json',
 
-        success: function(result) {
+        success: function (result) {
             $('title').text(result.title);
             $('.sidebar-heading').html(`${result.title}`);
             $('.brand-title').text('Olá ' + user.nome);
 
             var menu = '';
-            $.each(result.items, function(index, element) {
+            $.each(result.items, function (index, element) {
                 if (permissions.indexOf(element.id) > -1) {
                     menu += '<a href="#' + element.id + '" class="list-group-item bg-success text-light list-group-item-action">' + '<i class="' + element.icon + '"></i> ' + element.label + '</a>';
                 }
@@ -34,12 +34,12 @@ if (localStorage.getItem('token') && localStorage.getItem('token') !== 'undefine
     var urlAPI = location.origin + '/gol/api/index.php';
     var loop;
     var userCaseId;
-    var out = function() {
+    var out = function () {
         localStorage.removeItem('token');
         window.location.reload();
     }
 
-    $('#menu').on('click', 'a', function() {
+    $('#menu').on('click', 'a', function () {
         clearInterval(loop);
 
         $('#menu a').removeClass("active");
@@ -50,7 +50,7 @@ if (localStorage.getItem('token') && localStorage.getItem('token') !== 'undefine
             if (jwt.exp * 1000 > $.now()) {
                 if (userCaseId !== 'out') {
                     if (user.mudasenha == "1") userCaseId = 'mudasenha';
-                    $('main').load('partial/' + userCaseId + '.html', function(responseTxt, statusTxt, xhr) {
+                    $('main').load('partial/' + userCaseId + '.html', function (responseTxt, statusTxt, xhr) {
                         if (statusTxt == 'success') $("#menu-toggle").click();
                     });
                 } else out();
@@ -58,19 +58,19 @@ if (localStorage.getItem('token') && localStorage.getItem('token') !== 'undefine
         }
     });
 
-    $("#menu-toggle").click(function(e) {
+    $("#menu-toggle").click(function (e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
-    
+
     if (user.mudasenha == "1") {
-        $('main').load('partial/mudasenha.html', function(responseTxt, statusTxt, xhr) {
+        $('main').load('partial/mudasenha.html', function (responseTxt, statusTxt, xhr) {
             if (statusTxt == 'success') $('[href="#mudasenha"]').addClass("active");
         });
     } else {
         if (permissions.indexOf('dashboard') > -1) {
             /* se tiver permissao de cadastro de infracao */
-            $('main').load('partial/painel-controle.html', function(responseTxt, statusTxt, xhr) {
+            $('main').load('partial/home.html', function (responseTxt, statusTxt, xhr) {
                 if (statusTxt == 'success') $('[href="#dashboard"]').addClass("active");
             });
         } else {
@@ -83,17 +83,11 @@ if (localStorage.getItem('token') && localStorage.getItem('token') !== 'undefine
         console.log(error[1]);
     }
 
-    if(user.permissao == 'painel-controle-externo,solicitacao,solicitacao-acompanhar'){
-    $('main').load('partial/painel-controle-externo.html'); 
-        console.log("externo")
-
-    }else{
-        $('main').load('partial/painel-controle.html');
-    }
+    $('main').load('partial/home.html');
 
     $('.modal-dialog').addClass('modal-lg');
-    
-    function padronizarData(dt){
+
+    function padronizarData(dt) {
         return dt.replace(" ", "T");
     }
 
@@ -107,7 +101,7 @@ if (localStorage.getItem('token') && localStorage.getItem('token') !== 'undefine
     $('.modal-content').load('partial/login.html');
     $('.modal').modal('show');
     $('.footer').hide();
-    
+
 }
 
 function alertar(classe, msg) {
