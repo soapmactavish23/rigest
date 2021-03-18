@@ -1,0 +1,17 @@
+{
+    "title": "GOL SCORES",
+    "items": [
+        { "id": "home", "label": "Home", "icon": "fas fa-home" },
+        { "id": "dashboard", "label": "Dashboard", "icon": "fas fa-tachometer-alt" },
+        { "id": "rodada", "label": "Cadastrar Rodada", "icon": "fas fa-futbol" },
+        { "id": "pontuacao", "label": "Cadastrar Pontuação", "icon": "fas fa-trophy" },
+        { "id": "campeonato", "label": "Cadastrar Campeonato", "icon": "fas fa-trophy" },
+        { "id": "time", "label": "Cadastrar Time", "icon": "fas fa-futbol" },
+        { "id": "forma-pagamento", "label": "Cadastrar Formas de Pagamento", "icon": "far fa-credit-card" },
+        { "id": "validar-aposta", "label": "Validar Aposta", "icon": "fas fa-tachometer-alt" },
+        { "id": "consultar-aposta", "label": "Consultar Aposta", "icon": "fas fa-tachometer-alt" },
+        { "id": "relatorio", "label": "Cadastrar Relatório", "icon": "fas fa-file-medical" },
+        { "id": "gera-relatorio", "label": "Gerar Relatório", "icon": "fas fa-file-download" },
+        { "id": "usuario", "label": "Controle de Usuários", "icon": "fas fa-user-plus" }
+    ]
+}

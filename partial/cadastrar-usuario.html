@@ -1,0 +1,190 @@
+<form role="form">
+    <div class="modal-header text-center">
+        <h3><i class="fas fa-user-plus"></i> Cadastro de Usuário</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">&times;</button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for='nome'>Nome</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='text' id='nome' name='nome'
+                        placeholder='Digite o nome completo do usuário' maxlength="50" required>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for='apelido'>Apelido</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='text' id='apelido' name='apelido'
+                        placeholder='Digite o apelido do usuário' maxlength="50" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label>E-mail</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-envelope "></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='email' id='email' name='email'
+                        placeholder='Digite o e-mail do usuário' maxlength="50" required>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label>Contato</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-phone "></i>
+                        </span>
+                    </div>
+                    <input class='form-control contato' type='text' id='contato' name='contato'
+                        placeholder='Digite o contato do usuário' maxlength="50" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for="senha">Senha</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-lock "></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='password' id='senha' name='senha'
+                        placeholder='Digite a senha do usuário' maxlength="50" required>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for="senha2">Confirmar Senha</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-lock "></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='password' id='senha2' name='senha2'
+                        placeholder='Confirmar a senha do usuário' maxlength="50" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label>CPF</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-id-card-alt "></i>
+                        </span>
+                    </div>
+                    <input class='form-control cpf' type='text' id='cpf' name='cpf'
+                        placeholder='Digite o cpf do usuário' maxlength="50" required>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for="dt_nascimento">Data de Nascimento</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-calendar "></i>
+                        </span>
+                    </div>
+                    <input type="date" id="dt_nascimento" class="form-control" name="dt_nascimento" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for="estado_id">Estado</label>
+                <select name="estado_id" id="estado_id" class="form-control" required data-live-search='true'></select>
+            </div>
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for="cidade_id">Cidade</label>
+                <div id="div-cidade">
+                    <div class="alert alert-warning" role="alert">
+                        Selecione seu Estado para selecionar sua Cidade
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for="cep">CEP</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                    </div>
+                    <input class='form-control cep' type='text' id='cep' name='cep'
+                        placeholder='Digite o CEP do usuário' maxlength="50" required>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label>Bairro</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fas fa-thumbtack"></i>
+                        </span>
+                    </div>
+                    <input class="form-control" required placeholder="Digite o Bairro" id="bairro" name="bairro"
+                        maxlength="80">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <label>Endereço</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                    </div>
+                    <input class="form-control" required placeholder="Digite o Endereço" id="logradouro"
+                        name="logradouro" maxlength="80">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <label>Número</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                    </div>
+                    <input class="form-control" required placeholder="Digite o N°" id="numero" name="numero"
+                        maxlength="11">
+                </div>
+            </div>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="termos_de_uso" name='termos_de_uso' required>
+            <label class="form-check-label" for="termos_de_uso">Aceito os <a href="#">Termos e Condições</a></label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <alert class='lead'></alert>
+        <buttons>
+            <button class='btn btn-success hvr-grow' type='submit' id='btn-entrar'>
+                Salvar <i class="fas fa-save"></i>
+            </button>
+        </buttons>
+    </div>
+</form>
+<script src="js/cadastrar-usuario.js"></script>

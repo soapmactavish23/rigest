@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <div class="card shadow-lg text-center" data-aos="zoom-in">
+            <div class="card-header">
+                <img src="img/perfil-padrao.png" class="img-thumbnail" alt="foto de perfil" id="img-foto-perfil" width="320" height="320">
+            </div>
+            <div class="card-body">
+                <h2 class="lead apelido">Apelido</h2>
+                <h6 class="email">E-mail</h6>
+            </div>
+            <div class="card-footer">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <button class="btn btn-primary form-control hvr-grow" id="btn-editar-perfil">
+                            <i class="fa fa-pencil" aria-hidden="true"></i> Editar Perfil
+                        </button>
+                    </div>
+                    <div class="col-sm-6">
+                        <button class="btn btn-success form-control hvr-grow" id="btn-editar-foto">
+                            <i class="fa fa-camera" aria-hidden="true"></i> Editar Foto
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card shadow-lg" data-aos="zoom-in">
+                <div class="card-header">
+                    <h2>
+                        <i class="fa fa-address-card-o" aria-hidden="true"></i> Dados Pessoais
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action">Nome: <strong id="nome"></strong></li>
+                        <li class="list-group-item list-group-item-action">Apelido: <strong class="apelido"></strong></li>
+                        <li class="list-group-item list-group-item-action">E-mail: <strong class="email"></strong></li>
+                        <li class="list-group-item list-group-item-action">Contato: <strong id="contato"></strong></li>
+                        <li class="list-group-item list-group-item-action">CPF: <strong id="cpf"></strong></li>
+                        <li class="list-group-item list-group-item-action">Data de Nascimento: <strong id="dt_nascimento"></strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card shadow-lg" data-aos="zoom-in">
+                <div class="card-header">
+                    <h2>
+                        <i class="fas fa-map-marker-alt"></i> Informações de Endereço
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action">Estado: <strong id="estado"></strong></li>
+                        <li class="list-group-item list-group-item-action">Cidade: <strong id="cidade"></strong></li>
+                        <li class="list-group-item list-group-item-action">CEP: <strong id="cep"></strong></li>
+                        <li class="list-group-item list-group-item-action">Bairro: <strong id="bairro"></strong></li>
+                        <li class="list-group-item list-group-item-action">Endereço: <strong id="logradouro"></strong></li>
+                        <li class="list-group-item list-group-item-action">Número: <strong id="numero"></strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/perfil.js"></script>

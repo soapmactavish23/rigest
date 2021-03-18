@@ -1,0 +1,116 @@
+<form role="form">
+    <div class="modal-header">
+        <h4 class='modal-title'></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">&times;</button>
+    </div>
+    <div class="modal-body">
+        <input hidden name='idconta'>
+        <input hidden name='idfoto_conta'>
+        <input hidden name='base64'>
+        <div class="text-center" id="div-midia">
+            <img src="" class="img-thumbnail" alt="foto do conta" id="midia-conta" width="320" height="320"><br><br>
+            <button class="btn btn-primary" type="button" id="btn-alterar"><i class="fas fa-camera"></i> Alterar
+                Foto</button>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for='banco'>Banco</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-university"></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='text' id='banco' name='banco' placeholder='Digite o nome do banco'
+                        maxlength="50" required>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for='pessoa'>Nome</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='text' id='pessoa' name='pessoa'
+                        placeholder='Digite o nome da pessoa' maxlength="50" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for='conta'>Conta</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-university"></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='text' id='conta' name='conta'
+                        placeholder='Digite o número da conta' maxlength="20">
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for='agencia'>Agência</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-university"></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='text' id='agencia' name='agencia'
+                        placeholder='Digite o número agência' maxlength="10">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <label for='pix'>pix</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-key"></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='text' id='pix' name='pix'
+                        placeholder='Digite a chave do pix (Opcional)' maxlength="50">
+                </div>
+            </div>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" id="tipo_poupanca" name='tipo' value="poupanca">
+            <label class="form-check-label" for="tipo_poupanca">Conta Poupança</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" id="tipo_corrente" name='tipo' value="corrente">
+            <label class="form-check-label" for="tipo_corrente">Conta Corrente</label>
+        </div>
+        <hr>
+        <!--UPLOAD IMAGEM-->
+        <div class="form-group" id="upload">
+            <label for="upload_foto_conta">Envie uma foto</label>
+            <div class="form-file">
+                <input type="file" id="upload_foto_conta" required>
+            </div>
+            <hr>
+            <img src="" alt="Foto da conta" id="preview_foto_conta" class="img-fluid img-thumbnail">
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="ativado" name='ativado'>
+            <label class="form-check-label" for="ativado">Ativado</label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <buttons>
+            <button class="btn btn-success hvr-grow" id="btn-salvar" type="submit">
+                <i class="fas fa-save"></i>
+                Salvar
+            </button>
+        </buttons>
+        <alert class='lead'></alert>
+    </div>
+</form>
+
+<script src='js/forma-pagamento-form.js'></script>

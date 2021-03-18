@@ -1,0 +1,42 @@
+.footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar-heading {
+    font-weight: bold;
+    /* border-bottom: 5px solid white; */
+}
+
+.navbar-item {
+    /* border-bottom: 5px solid white; */
+    color: white;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.modal-header, .close {
+	color: white;
+	background-color: #1565aa !important;
+	/* background-color: #5bc0de !important; */
+	border-top-left-radius: 0.3rem;
+	border-top-right-radius: 0.3rem;
+}
+
+.modal-footer {
+	display: block;
+	background-color: rgba(0, 0, 0, 0.1);
+	border-bottom-left-radius: 0.3rem;
+	border-bottom-right-radius: 0.3rem;
+}
+
+.bg-color-primary{
+	background-color: #1565aa;
+}
+
+.input-group-prepend > span, .input-group-text {
+	background-color: #1565aa;
+	color: white;
+}

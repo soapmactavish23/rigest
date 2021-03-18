@@ -1,0 +1,8 @@
+{
+    "name": "SISCAD",
+    "short_name": "UI",
+    "theme_color": "#042f66",
+    "background_color": "#042f66",
+    "display": "standalone",
+    "scope": "/index.html"
+}

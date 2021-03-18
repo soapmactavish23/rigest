@@ -1,0 +1,28 @@
+<form role="form">
+    <div class="modal-body">
+        <input hidden name='idpontuacao'>
+        <div class="form-group">
+            <label for='nome'>Nome</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text color-primary-icons" id="basic-addon1">
+                        <i class="fas fa-futbol"></i>
+                    </span>
+                </div>
+                <input class='form-control' type='text' id='nome' name='nome' placeholder='Digite o nome da Pontuação'
+                    maxlength="50" required>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <buttons>
+            <button class="btn btn-success hvr-grow" type="submit">
+                <i class="fas fa-save"></i>
+                Salvar
+            </button>
+        </buttons>
+        <alert class='lead'></alert>
+    </div>
+</form>
+
+<script src='js/pontuacao-form.js'></script>

@@ -1,0 +1,49 @@
+<form role="form">
+    <div class="h2 text-center">
+        <img src="img/logo.png" class="img-fluid">
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <label for="login">E-mail</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fas fa-envelope text-light"></i>
+                    </span>
+                </div>
+                <input type="email" id="login" class="form-control" placeholder="Digite seu email" name="login"
+                    required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password">Senha</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fas fa-lock text-light"></i>
+                    </span>
+                </div>
+                <input type="password" id="password" class="form-control" placeholder="Digite sua senha"
+                    name="password" required>
+            </div>
+        </div>
+        <div class="text-center">
+            <a class="hvr-grow" href="#" id="esqueceu-senha">
+                <i class="fas fa-lock"></i> Esqueceu a senha?
+            </a>
+            <!-- <div class="g-recaptcha" data-sitekey="6Lcf_e8ZAAAAAKktGsV3p-n91EeiWDZ7uhf8ujWJ"></div> -->
+        </div>
+    </div>
+    <div class="modal-footer">
+        <alert class='lead'></alert>
+        <buttons>
+            <a class='btn btn-info hvr-grow' href="index.html" >
+                <i class="fas fa-arrow-left"></i> Voltar 
+            </a>
+            <button class='btn btn-primary hvr-grow' type='submit' id='btn-entrar'>
+                Entrar <i class="fas fa-sign-in-alt"></i>
+            </button>
+        </buttons>
+    </div>
+</form>
+<script src="js/login.js"></script>

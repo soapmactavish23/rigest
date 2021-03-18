@@ -1,0 +1,30 @@
+<div class="modal-header">
+    <h4 class='modal-title'>Editar Foto de Perfil</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">&times;</button>
+</div>
+<form>
+    <div class="modal-body">
+        <input name="idfoto_perfil" id="idfoto_perfil" hidden>
+        <input name="base64" id="base64" hidden>
+        <!--UPLOAD IMAGEM-->
+        <fieldset>
+            <label for="upload_foto_perfil">Envie sua foto de perfil</label>
+            <div class="form-file">
+                <input type="file" id="upload_foto_perfil" required>
+            </div>
+            <hr>
+            <img src="" alt="Imagem da foto de perfil" id="preview_foto_perfil" class="img-fluid img-thumbnail">
+        </fieldset>
+    </div>
+    <div class="modal-footer">
+        <buttons>
+            <button class="btn btn-success hvr-grow" type="submit">
+                <i class="fas fa-save"></i>
+                Salvar
+            </button>
+        </buttons>
+        <alert class='lead'></alert>
+    </div>
+</form>
+
+<script src='js/foto-perfil.js'></script>

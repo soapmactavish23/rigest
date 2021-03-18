@@ -1,0 +1,66 @@
+<form role="form">
+    <div class="modal-header">
+        <h4 class='modal-title'></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">&times;</button>
+    </div>
+    <div class="modal-body">
+        <input hidden name='idtime'>
+        <input hidden name='idmidia_time'>
+        <input hidden name='base64'>
+        <div class="text-center" id="div-midia">
+            <img src="" class="img-thumbnail" alt="foto do time" id="midia-time" width="320" height="320"><br><br>
+            <button class="btn btn-primary" type="button" id="btn-alterar"><i class="fas fa-camera"></i> Alterar Foto</button>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for='nome'>Nome</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-futbol"></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='text' id='nome' name='nome' placeholder='Digite o nome do time'
+                        maxlength="50" required>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 col-md-12">
+                <label for='sigla'>Sigla</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fab fa-osi"></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='text' id='sigla' name='sigla' placeholder='Digite o sigla do time'
+                        maxlength="10" required>
+                </div>
+            </div>
+        </div>
+        <!--UPLOAD IMAGEM-->
+        <div class="form-group" id="upload">
+            <label for="upload_foto_time">Envie uma foto</label>
+            <div class="form-file">
+                <input type="file" id="upload_foto_time" required>
+            </div>
+            <hr>
+            <img src="" alt="Foto do time" id="preview_foto_time" class="img-fluid img-thumbnail">
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="ativado" name='ativado'>
+            <label class="form-check-label" for="ativado">Ativado</label>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <buttons>
+            <button class="btn btn-success hvr-grow" type="submit">
+                <i class="fas fa-save"></i>
+                Salvar
+            </button>
+        </buttons>
+        <alert class='lead'></alert>
+    </div>
+</form>
+
+<script src='js/time-form.js'></script>

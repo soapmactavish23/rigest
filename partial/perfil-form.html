@@ -1,0 +1,162 @@
+<form role="form">
+    <div class="modal-header">
+        <h4 class='modal-title'></h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">&times;</button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-sm-6">
+                <label for='nome'>Nome</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='text' id='nome' name='nome'
+                        placeholder='Digite o nome completo do usuário' maxlength="50" required>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label for='apelido'>Apelido</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='text' id='apelido' name='apelido'
+                        placeholder='Digite o apelido do usuário' maxlength="50" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label>E-mail</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-envelope text-light"></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='email' id='email' name='email'
+                        placeholder='Digite o e-mail do usuário' maxlength="50" required>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label>Contato</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-phone text-light"></i>
+                        </span>
+                    </div>
+                    <input class='form-control contato' type='text' id='contato' name='contato'
+                        placeholder='Digite o contato do usuário' maxlength="50" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label>CPF</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-id-card-alt text-light"></i>
+                        </span>
+                    </div>
+                    <input class='form-control cpf' type='text' id='cpf' name='cpf' placeholder='Digite o cpf do usuário'
+                        maxlength="50" required>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label for="dt_nascimento">Data de Nascimento</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-calendar text-light"></i>
+                        </span>
+                    </div>
+                    <input type="date" id="dt_nascimento" class="form-control" name="dt_nascimento" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="estado_id">Estado</label>
+                <select name="estado_id" id="estado_id" class="form-control" required data-live-search='true'></select>
+            </div>
+            <div class="col-sm-6">
+                <label for="cidade_id">Cidade</label>
+                <div id="div-cidade">
+                    <div class="alert alert-warning" role="alert">
+                        Selecione seu Estado para selecionar sua Cidade
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <label for="cep">CEP</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                    </div>
+                    <input class='form-control cep' type='text' id='cep' name='cep' placeholder='Digite o CEP do usuário'
+                        maxlength="50" required>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label>Bairro</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fas fa-thumbtack"></i>
+                        </span>
+                    </div>
+                    <input class="form-control" required placeholder="Digite o Bairro" id="bairro" name="bairro"
+                        maxlength="80">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <label>Endereço</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                    </div>
+                    <input class="form-control" required placeholder="Digite o Endereço" id="logradouro"
+                        name="logradouro" maxlength="80">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <label>Número</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                    </div>
+                    <input class="form-control" required placeholder="Digite o N°" id="numero" name="numero"
+                        maxlength="11">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <buttons>
+            <button class="btn btn-success hvr-grow" type="submit">
+                <i class="fas fa-save"></i>
+                Salvar
+            </button>
+        </buttons>
+        <alert class='lead'></alert>
+    </div>
+</form>
+
+<script src='js/perfil-form.js'></script>

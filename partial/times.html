@@ -1,0 +1,45 @@
+<style>
+    td.details-control-add {
+        background: url('img/add-control.png') no-repeat center center;
+        cursor: pointer;
+    }
+
+    td.details-control-rm {
+        background: url('img/remove-control.png') no-repeat center center;
+        cursor: pointer;
+    }
+</style>
+
+<div class="modal-body">
+    <div data-aos="zoom-in">
+        <h3>
+            <button class="btn btn-primary float-right" id="btn-novo-time"><i class="fas fa-plus"></i> Novo</button>
+            <button class="btn btn-primary float-right" id="btn-voltar-time"><i class="fas fa-arrow-left"></i> Voltar</button>
+            <i class="fas fa-futbol"></i> <span id="title-times">Times Selecionados</span>
+        </h3>
+        <div id="td_add">
+            <table id="datatable_times_add" class="table table-hover" style="width:100%">
+                <thead class="bg-primary text-light">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sigla</th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div id="td_rm">
+            <table id="datatable_times_rm" class="table table-hover" style="width:100%">
+                <thead class="bg-primary text-light">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Sigla</th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src='js/times.js'></script>
