@@ -12,18 +12,18 @@ if (localStorage.getItem('token') && localStorage.getItem('token') !== 'undefine
 
         success: function(result) {
             $('title').text(result.title);
-            $('.sidebar-heading').html(`<img src="img/b.png" class="img-fluid" width="40" height="40" alt=""> ${result.title}`);
+            $('.sidebar-heading').html(`${result.title}`);
             $('.brand-title').text('Olá ' + user.nome);
 
             var menu = '';
             $.each(result.items, function(index, element) {
                 if (permissions.indexOf(element.id) > -1) {
-                    menu += '<a href="#' + element.id + '" class="list-group-item bg-primary text-light list-group-item-action">' + '<i class="' + element.icon + '"></i> ' + element.label + '</a>';
+                    menu += '<a href="#' + element.id + '" class="list-group-item bg-success text-light list-group-item-action">' + '<i class="' + element.icon + '"></i> ' + element.label + '</a>';
                 }
             });
-            menu += '<a href="#perfil" class="list-group-item bg-primary text-light list-group-item-action"> <i class="fas fa-user-edit"></i> Editar Perfil</a>';
-            menu += '<a href="#mudasenha" class="list-group-item bg-primary text-light list-group-item-action"> <i class="fas fa-lock"></i> Mudar senha</a>';
-            menu += '<a href="#out" class="list-group-item bg-primary text-light list-group-item-action"> <i class="fas fa-sign-out-alt"></i> Sair</a>';
+            menu += '<a href="#perfil" class="list-group-item bg-success text-light list-group-item-action"> <i class="fas fa-user-edit"></i> Editar Perfil</a>';
+            menu += '<a href="#mudasenha" class="list-group-item bg-success text-light list-group-item-action"> <i class="fas fa-lock"></i> Mudar senha</a>';
+            menu += '<a href="#out" class="list-group-item bg-success text-light list-group-item-action"> <i class="fas fa-sign-out-alt"></i> Sair</a>';
 
             $('#menu').html(menu);
 
@@ -102,7 +102,7 @@ if (localStorage.getItem('token') && localStorage.getItem('token') !== 'undefine
     $('nav').hide()
     $('#sidebar-wrapper').hide();
     $('main').hide();
-    $('title').text('Gol Scores');
+    $('title').text('RIGEST');
     $('.modal-dialog').addClass('modal-sm modal-dialog-centered');
     $('.modal-content').load('partial/login.html');
     $('.modal').modal('show');

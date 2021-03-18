@@ -1,61 +1,49 @@
-// Carregar Dados
-function carregarDados() {
+$.ajax({
+    type: 'POST',
+    url: 'api/usuario/obter',
+    data: { token },
+    success: function (result) {
+        $.each(result.data, function (index, element) {
+            $('input[name="nome"]').val(element.nome);
+            $('input[name="email"]').val(element.email);
+            $('input[name="contato"]').val(element.contato);
+            $('input[name="cpf"]').val(element.cpf);
+            //Mascaras
+            $('#cpf').mask('999.999.999-99');
+            $('#contato').mask('(99) 99999-9999');
+        });
+    }
+});
+
+$('form').submit(function () {
+    var formData = $(this).serializeArray();
+    formData.push({ name: 'idusuario', value: user.idusuario });
+    formData.push({ name: 'token', value: token });
     $.ajax({
         type: 'POST',
-        url: 'api/usuario/obter',
-        data: { token },
+        url: 'api/usuario/editarPerfil',
+        data: formData,
+        beforeSend: function () {
+            alertar('info', 'Aguarde um momento ...');
+        },
+        error: function () { },
         success: function (result) {
-            $.each(result.data, function (index, element) {
-                data = element;
-                // Dados Pessoais
-                $('#nome').text(element.nome);
-                $('.apelido').text(element.apelido);
-                $('.email').text(element.email);
-                $('#contato').text(element.contato);
-                $('#cpf').text(element.cpf);
-                $('#dt_nascimento').text(datetime_format(element.dt_nascimento, 'd/m/y'));
+            if (result.status == 'error') {
+                $('alert').text(result.data);
+            } else {
+                $('.modal-title').text('Usuário #' + result.idusuario);
 
-                // Informações de Endereço
-                $('#estado').text(element.estado);
-                $('#cidade').text(element.cidade);
-                $('#cep').text(element.cep);
-                $('#bairro').text(element.bairro);
-                $('#logradouro').text(element.logradouro);
-                $('#numero').text(element.numero);
-
-                //Mascara
-                $('.contato').mask('(99) 99999-9999');
-                $('.cpf').mask('999.999.999-99');
-                $('.cep').mask('99999-999');
-            })
-        }
-    });
-    $.ajax({
-        type: 'POST',
-        url: 'api/midia/obterFotoPerfil',
-        data: { token: token, idusuario: user.idusuario },
-        success: function (result) {
-            if (result.status == 'success') {
-                $.each(result.data, function (index, element) {
-                    data.base64 = element.base64;
-                    data.idmidia = element.base64;
-                    if (element.base64) $('#img-foto-perfil').attr('src', element.base64);
-                })
+                $('.modal-footer').attr('class', `modal-footer bg-success text-light`);
+                $('alert').text(`Perfil Editado!`);
             }
+        },
+        complete: function () {
+            setTimeout(function () {
+                $('alert').toggle();
+                $('buttons').toggle();
+                $('.modal-footer').attr('class', 'modal-footer');
+            }, 2000);
         }
     });
-}
-
-carregarDados();
-
-$('#btn-editar-perfil').click(function () {
-    $('.modal-content').load('partial/perfil-form.html', function (response, status) {
-        if (status == 'success') $('.modal').modal('show');
-    });
-})
-
-$('#btn-editar-foto').click(function () {
-    $('.modal-content').load('partial/foto-perfil.html', function (response, status) {
-        if (status == 'success') $('.modal').modal('show');
-    });
-})
+    return false;
+});

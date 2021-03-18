@@ -17,14 +17,7 @@ class Usuario extends ConnectionDB {
 
 	public function obter(){
 		$_user = validateJWT( @ $_REQUEST['token']);
-		$sql = "SELECT u.idusuario, u.nome, apelido, email, contato, cpf, contato, dt_nascimento, u.estado_id, u.cidade_id, cep, bairro, logradouro, numero, c.nome AS cidade, 
-		CONCAT(e.sigla, ' / ', e.nome) AS estado
-		FROM usuario u
-		INNER JOIN cidade c
-		ON c.idcidade = u.cidade_id
-		INNER JOIN estado e
-		ON e.idestado = u.estado_id
-		WHERE idusuario = ".$_user->idusuario;
+		$sql = "SELECT * FROM usuario WHERE idusuario = ".$_user->idusuario;
 		return $this->read($sql);
 	}
 
@@ -66,7 +59,6 @@ class Usuario extends ConnectionDB {
 		$_user = validateJWT(@ $_REQUEST['token']);
 		$this->idusuario = $_user->idusuario;
 		$this->nome = addslashes($_REQUEST['nome']);
-		$this->apelido = addslashes($_REQUEST['apelido']);
 		$this->email = addslashes($_REQUEST['email']);
 
 		require_once('Helper.php');
@@ -74,14 +66,6 @@ class Usuario extends ConnectionDB {
 
 		$this->contato = $_helper->removerCaracteres(addslashes(@ $_REQUEST['contato']));
 		$this->cpf = $_helper->removerCaracteres(addslashes(@ $_REQUEST['cpf']));
-		$this->cep = $_helper->removerCaracteres(addslashes(@ $_REQUEST['cep']));
-
-		$this->dt_nascimento = @ $_REQUEST['dt_nascimento'];
-		$this->estado_id = @ $_REQUEST['estado_id'];
-		$this->cidade_id = @ $_REQUEST['cidade_id'];
-		$this->bairro = addslashes(@ $_REQUEST['bairro']);
-		$this->logradouro = addslashes(@ $_REQUEST['logradouro']);
-		$this->numero = addslashes(@ $_REQUEST['numero']);
 
 		$this->dt_update = date('Y-m-d H:i:s');
 		$this->update();
@@ -92,7 +76,6 @@ class Usuario extends ConnectionDB {
 		$_user = validateJWT(@ $_REQUEST['token']);
 		$this->idusuario = @ $_REQUEST['idusuario'];
 		$this->nome = addslashes($_REQUEST['nome']);
-		$this->apelido = addslashes($_REQUEST['apelido']);
 		$this->email = addslashes($_REQUEST['email']);
 		
 		require_once('Helper.php');
@@ -100,14 +83,7 @@ class Usuario extends ConnectionDB {
 
 		$this->contato = $_helper->removerCaracteres(addslashes(@ $_REQUEST['contato']));
 		$this->cpf = $_helper->removerCaracteres(addslashes(@ $_REQUEST['cpf']));
-		$this->cep = $_helper->removerCaracteres(addslashes(@ $_REQUEST['cep']));
 
-		$this->dt_nascimento = @ $_REQUEST['dt_nascimento'];
-		$this->estado_id = @ $_REQUEST['estado_id'];
-		$this->cidade_id = @ $_REQUEST['cidade_id'];
-		$this->bairro = addslashes(@ $_REQUEST['bairro']);
-		$this->logradouro = addslashes(@ $_REQUEST['logradouro']);
-		$this->numero = addslashes(@ $_REQUEST['numero']);
 		$this->permissao = implode(',', @ $_REQUEST['permissao']);
 
 		if ( @ $_REQUEST['ativado'] ) $this->ativado = 'S';
@@ -128,20 +104,11 @@ class Usuario extends ConnectionDB {
 		$_helper = new Helper();
 		$cpf = $_helper->removerCaracteres(addslashes(@ $_REQUEST['cpf']));
 		$contato = $_helper->removerCaracteres(addslashes(@ $_REQUEST['contato']));
-		$cep = $_helper->removerCaracteres(addslashes(@ $_REQUEST['cep']));
 
 		$this->nome = addslashes($_REQUEST['nome']);
-		$this->apelido = addslashes($_REQUEST['apelido']);
 		$this->email = addslashes($_REQUEST['email']);
 		$this->contato = $contato;
 		$this->cpf = $cpf;
-		$this->dt_nascimento = @ $_REQUEST['dt_nascimento'];
-		$this->estado_id = @ $_REQUEST['estado_id'];
-		$this->cidade_id = @ $_REQUEST['cidade_id'];
-		$this->cep = $cep;
-		$this->bairro = addslashes(@ $_REQUEST['bairro']);
-		$this->logradouro = addslashes(@ $_REQUEST['logradouro']);
-		$this->numero = addslashes(@ $_REQUEST['numero']);
 		$this->senha = md5(addslashes(@ $_REQUEST['senha']));
 		$this->permissao = "usuario";
 

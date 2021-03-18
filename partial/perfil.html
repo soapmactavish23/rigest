@@ -1,69 +1,71 @@
-<div class="container">
-    <div class="d-flex justify-content-center">
-        <div class="card shadow-lg text-center" data-aos="zoom-in">
-            <div class="card-header">
-                <img src="img/perfil-padrao.png" class="img-thumbnail" alt="foto de perfil" id="img-foto-perfil" width="320" height="320">
-            </div>
-            <div class="card-body">
-                <h2 class="lead apelido">Apelido</h2>
-                <h6 class="email">E-mail</h6>
-            </div>
-            <div class="card-footer">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <button class="btn btn-primary form-control hvr-grow" id="btn-editar-perfil">
-                            <i class="fa fa-pencil" aria-hidden="true"></i> Editar Perfil
-                        </button>
-                    </div>
-                    <div class="col-sm-6">
-                        <button class="btn btn-success form-control hvr-grow" id="btn-editar-foto">
-                            <i class="fa fa-camera" aria-hidden="true"></i> Editar Foto
-                        </button>
+<form role="form">
+    <div class="card">
+        <div class="card-header">
+            <h3>Perfil de Usuário</h3>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-12 col-lg-6 col-md-12">
+                    <label for='nome'>Nome</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </div>
+                        <input class='form-control' type='text' id='nome' name='nome'
+                            placeholder='Digite o nome completo do usuário' maxlength="50" required>
                     </div>
                 </div>
+                <div class="col-sm-12 col-lg-6 col-md-12">
+                    <label>E-mail</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                <i class="fas fa-envelope "></i>
+                            </span>
+                        </div>
+                        <input class='form-control' type='email' id='email' name='email'
+                            placeholder='Digite o e-mail do usuário' maxlength="50" required>
+                    </div>
+                </div>
             </div>
+            <div class="row">
+                <div class="col-sm-12 col-lg-6 col-md-12">
+                    <label>Contato</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                <i class="fas fa-phone "></i>
+                            </span>
+                        </div>
+                        <input class='form-control contato' type='text' id='contato' name='contato'
+                            placeholder='Digite o contato do usuário' maxlength="50" required>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6 col-md-12">
+                    <label>CPF</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                <i class="fas fa-id-card-alt "></i>
+                            </span>
+                        </div>
+                        <input class='form-control cpf' type='text' id='cpf' name='cpf'
+                            placeholder='Digite o cpf do usuário' maxlength="50" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <buttons>
+                <button class="btn btn-success hvr-grow" type="submit">
+                    <i class="fas fa-save"></i>
+                    Salvar
+                </button>
+            </buttons>
+            <alert class='lead'></alert>
         </div>
     </div>
-    <br>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card shadow-lg" data-aos="zoom-in">
-                <div class="card-header">
-                    <h2>
-                        <i class="fa fa-address-card-o" aria-hidden="true"></i> Dados Pessoais
-                    </h2>
-                </div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        <li class="list-group-item list-group-item-action">Nome: <strong id="nome"></strong></li>
-                        <li class="list-group-item list-group-item-action">Apelido: <strong class="apelido"></strong></li>
-                        <li class="list-group-item list-group-item-action">E-mail: <strong class="email"></strong></li>
-                        <li class="list-group-item list-group-item-action">Contato: <strong id="contato"></strong></li>
-                        <li class="list-group-item list-group-item-action">CPF: <strong id="cpf"></strong></li>
-                        <li class="list-group-item list-group-item-action">Data de Nascimento: <strong id="dt_nascimento"></strong></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card shadow-lg" data-aos="zoom-in">
-                <div class="card-header">
-                    <h2>
-                        <i class="fas fa-map-marker-alt"></i> Informações de Endereço
-                    </h2>
-                </div>
-                <div class="card-body">
-                    <ul class="list-group">
-                        <li class="list-group-item list-group-item-action">Estado: <strong id="estado"></strong></li>
-                        <li class="list-group-item list-group-item-action">Cidade: <strong id="cidade"></strong></li>
-                        <li class="list-group-item list-group-item-action">CEP: <strong id="cep"></strong></li>
-                        <li class="list-group-item list-group-item-action">Bairro: <strong id="bairro"></strong></li>
-                        <li class="list-group-item list-group-item-action">Endereço: <strong id="logradouro"></strong></li>
-                        <li class="list-group-item list-group-item-action">Número: <strong id="numero"></strong></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+</form>
 <script src="js/perfil.js"></script>

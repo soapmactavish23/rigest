@@ -35,7 +35,7 @@ $('form').submit(function() {
     return false;
 });
 
-$('#btn-solicitacao').click(function() {
+$('#btn-cadastrar').click(function() {
     $(".modal-content").load("partial/cadastrar-usuario.html");
 });
 

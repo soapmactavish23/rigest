@@ -5,10 +5,6 @@
     </div>
     <div class="modal-body">
         <input type='hidden' name='idusuario'>
-        <div class="d-flex justify-content-center">
-            <img src="img/perfil-padrao.png" class="img-thumbnail" alt="foto de perfil" id="img-foto-perfil" width="320" height="320">
-        </div>
-        <hr>
         <div class="row">
             <div class="col-sm-12 col-lg-6 col-md-12">
                 <label for='nome'>Nome</label>
@@ -23,20 +19,6 @@
                 </div>
             </div>
             <div class="col-sm-12 col-lg-6 col-md-12">
-                <label for='apelido'>Apelido</label>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text color-primary-icons" id="basic-addon1">
-                            <i class="fas fa-user"></i>
-                        </span>
-                    </div>
-                    <input class='form-control' type='text' id='apelido' name='apelido'
-                        placeholder='Digite o apelido do usuário' maxlength="50" required>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-lg-6 col-md-12">
                 <label>E-mail</label>
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
@@ -48,6 +30,8 @@
                         placeholder='Digite o e-mail do usuário' maxlength="50" required>
                 </div>
             </div>
+        </div>
+        <div class="row">
             <div class="col-sm-12 col-lg-6 col-md-12">
                 <label>Contato</label>
                 <div class="input-group mb-3">
@@ -60,8 +44,6 @@
                         placeholder='Digite o contato do usuário' maxlength="50" required>
                 </div>
             </div>
-        </div>
-        <div class="row">
             <div class="col-sm-12 col-lg-6 col-md-12">
                 <label>CPF</label>
                 <div class="input-group mb-3">
@@ -72,83 +54,6 @@
                     </div>
                     <input class='form-control' type='text' id='cpf' name='cpf' placeholder='Digite o cpf do usuário'
                         maxlength="50" required>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-6 col-md-12">
-                <label for="dt_nascimento">Data de Nascimento</label>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text color-primary-icons" id="basic-addon1">
-                            <i class="fas fa-calendar text-light"></i>
-                        </span>
-                    </div>
-                    <input type="date" id="dt_nascimento" class="form-control" name="dt_nascimento" required>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-lg-6 col-md-12">
-                <label for="estado_id">Estado</label>
-                <select name="estado_id" id="estado_id" class="form-control" required data-live-search='true'></select>
-            </div>
-            <div class="col-sm-12 col-lg-6 col-md-12">
-                <label for="cidade_id">Cidade</label>
-                <div id="div-cidade">
-                    <div class="alert alert-warning" role="alert">
-                        Selecione seu Estado para selecionar sua Cidade
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-lg-6 col-md-12">
-                <label for="cep">CEP</label>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text color-primary-icons" id="basic-addon1">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </span>
-                    </div>
-                    <input class='form-control' type='text' id='cep' name='cep' placeholder='Digite o CEP do usuário'
-                        maxlength="50" required>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-6 col-md-12">
-                <label>Bairro</label>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">
-                            <i class="fas fa-thumbtack"></i>
-                        </span>
-                    </div>
-                    <input class="form-control" required placeholder="Digite o Bairro" id="bairro" name="bairro"
-                        maxlength="80">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-8">
-                <label>Endereço</label>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </span>
-                    </div>
-                    <input class="form-control" required placeholder="Digite o Endereço" id="logradouro"
-                        name="logradouro" maxlength="80">
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <label>Número</label>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="basic-addon1">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </span>
-                    </div>
-                    <input class="form-control" required placeholder="Digite o N°" id="numero" name="numero"
-                        maxlength="11">
                 </div>
             </div>
         </div>

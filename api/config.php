@@ -1,6 +1,6 @@
 <?php
 
-define('DB_DSN','mysql:host=localhost;dbname=gol');
+define('DB_DSN','mysql:host=localhost;dbname=rigest');
 define('DB_USER','root');
 define('DB_PASSWD','123456');
 
