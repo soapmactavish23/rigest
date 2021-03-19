@@ -1,22 +1,6 @@
 $('alert').hide();
 $('.modal-dialog').addClass('modal-lg');
 
-//Validar CPF
-$('input[name="cpf"]').change(function () {
-    if ($(this).val().length > 13) {
-        if (!isValidCPF($(this).val())) {
-            alertar('danger', 'CPF Inválido');
-            setTimeout(function () {
-                $('alert').toggle();
-                $('buttons').toggle();
-                $('.modal-footer').attr('class', 'modal-footer');
-            }, 2000);
-            $(this).val(null);
-            $('.cpf').mask('999.999.999-99');
-        }
-    }
-});
-
 //Validar Senha
 $('input[name="senha2"]').change(function () {
     if ($(this).val() != $('input[name="senha"]').val()) {
@@ -44,8 +28,8 @@ $('form').submit(function () {
             if (result.status == 'error') {
                 console.log(result.data)
                 $('.modal-footer').attr('class', `modal-footer bg-danger text-light`);
-                if (result.data.indexOf("cpf") != -1) {
-                    $('alert').text('CPF em uso por outro usuario!');
+                if (result.data.indexOf("cartao_sus") != -1) {
+                    $('alert').text('cartao_sus em uso por outro usuario!');
                 } else if (result.data.indexOf("email") != -1) {
                     $('alert').text("E-mail em uso por outro usuario!");
                 } else {
@@ -71,5 +55,5 @@ $('form').submit(function () {
 $('.modal-dialog').addClass('modal-md modal-dialog-centered');
 
 //Mascaras
-$('#cpf').mask('999.999.999-99');
+$('#cartao_sus').mask('9999 9999 9999 9999');
 $('#contato').mask('(99) 99999-9999');

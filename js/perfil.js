@@ -7,9 +7,10 @@ $.ajax({
             $('input[name="nome"]').val(element.nome);
             $('input[name="email"]').val(element.email);
             $('input[name="contato"]').val(element.contato);
-            $('input[name="cpf"]').val(element.cpf);
+            $('input[name="cartao_sus"]').val(element.cartao_sus);
+            $('input[name="cbo"]').val(element.cbo);
             //Mascaras
-            $('#cpf').mask('999.999.999-99');
+            $('#cartao_sus').mask('9999 9999 9999 9999');
             $('#contato').mask('(99) 99999-9999');
         });
     }

@@ -2,9 +2,9 @@
     "title": "RIGEST",
     "items": [
         { "id": "home", "label": "Home", "icon": "fas fa-home" },
-        { "id": "cadastrar-risco", "label": "Cadastrar Risco Gestacional", "icon": "fas fa-file-medical" },
-        { "id": "consultar-risco", "label": "Cadastrar Risco Gestacional", "icon": "fas fa-search" },
-        { "id": "consultar-risco-geral", "label": "Cadastrar Risco Gestacional Geral", "icon": "fas fa-search" },
+        { "id": "cadastrar-ficha", "label": "Cadastrar Risco Gestacional", "icon": "fas fa-file-medical" },
+        { "id": "consultar-ficha", "label": "Cadastrar Risco Gestacional", "icon": "fas fa-search" },
+        { "id": "consultar-ficha-geral", "label": "Cadastrar Risco Gestacional Geral", "icon": "fas fa-search" },
         { "id": "usuario", "label": "Usuários", "icon": "fas fa-user-plus" }
     ]
 }

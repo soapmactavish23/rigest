@@ -65,7 +65,7 @@ class Usuario extends ConnectionDB {
 		$_helper = new Helper();
 
 		$this->contato = $_helper->removerCaracteres(addslashes(@ $_REQUEST['contato']));
-		$this->cpf = $_helper->removerCaracteres(addslashes(@ $_REQUEST['cpf']));
+		$this->cartao_sus = $_helper->removerCaracteres(addslashes(@ $_REQUEST['cartao_sus']));
 
 		$this->dt_update = date('Y-m-d H:i:s');
 		$this->update();
@@ -77,12 +77,13 @@ class Usuario extends ConnectionDB {
 		$this->idusuario = @ $_REQUEST['idusuario'];
 		$this->nome = addslashes($_REQUEST['nome']);
 		$this->email = addslashes($_REQUEST['email']);
+		$this->cbo = addslashes($_REQUEST['cbo']);
 		
 		require_once('Helper.php');
 		$_helper = new Helper();
 
 		$this->contato = $_helper->removerCaracteres(addslashes(@ $_REQUEST['contato']));
-		$this->cpf = $_helper->removerCaracteres(addslashes(@ $_REQUEST['cpf']));
+		$this->cartao_sus = $_helper->removerCaracteres(addslashes(@ $_REQUEST['cartao_sus']));
 
 		$this->permissao = implode(',', @ $_REQUEST['permissao']);
 
@@ -102,13 +103,14 @@ class Usuario extends ConnectionDB {
 
 	public function cadastrar(){
 		$_helper = new Helper();
-		$cpf = $_helper->removerCaracteres(addslashes(@ $_REQUEST['cpf']));
+		$cartao_sus = $_helper->removerCaracteres(addslashes(@ $_REQUEST['cartao_sus']));
 		$contato = $_helper->removerCaracteres(addslashes(@ $_REQUEST['contato']));
 
 		$this->nome = addslashes($_REQUEST['nome']);
 		$this->email = addslashes($_REQUEST['email']);
+		$this->cbo = addslashes($_REQUEST['cbo']);
 		$this->contato = $contato;
-		$this->cpf = $cpf;
+		$this->cartao_sus = $cartao_sus;
 		$this->senha = md5(addslashes(@ $_REQUEST['senha']));
 		$this->permissao = "usuario";
 
@@ -120,7 +122,8 @@ class Usuario extends ConnectionDB {
 		$_user = validateJWT( @ $_REQUEST['token']);
 		$this->idusuario = @ $_REQUEST['idusuario'];
 		$this->nome = addslashes(@ $_REQUEST['nome']);
-		$this->cpf = addslashes(@ $_REQUEST['cpf']);
+		$this->cartao_sus = addslashes(@ $_REQUEST['cartao_sus']);
+		$this->cbo = addslashes($_REQUEST['cbo']);
 		$this->email = addslashes(@ $_REQUEST['email']);
 		$this->contato = addslashes(@ $_REQUEST['contato']);
 		return $this->update();

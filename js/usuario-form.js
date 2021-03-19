@@ -10,7 +10,8 @@ if (data) {
     $('input[name="email"]').val(data.email);
     $('#ativado').prop('checked', (data.ativado == 'S' ? true : false));
     $('input[name="contato"]').val(data.contato);
-    $('input[name="cpf"]').val(data.cpf);
+    $('input[name="cartao_sus"]').val(data.cartao_sus);
+    $('input[name="cbo"]').val(data.cbo);
 
     if (data.ativado == 'S') $('#btn-excluir').hide();
     else $('#btn-excluir').show();
@@ -151,5 +152,5 @@ $('#btn-renovar-senha').click(function () {
 });
 
 //Mascaras
-$('#cpf').mask('999.999.999-99');
+$('#cartao_sus').mask('9999 9999 9999 9999');
 $('#contato').mask('(99) 99999-9999');

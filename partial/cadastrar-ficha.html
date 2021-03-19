@@ -1,0 +1,146 @@
+<h1>FICHA DE CLASSIFICAÇÃO DE RISCO DA GESTANTE</h1>
+<form>
+    <div class="card shadow">
+        <div class="card-header">
+            <legend>IDENTIFICAÇÃO DA PACIENTE</legend>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for='nome'>Nome</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text color-primary-icons" id="basic-addon1">
+                            <i class="fas fa-user"></i>
+                        </span>
+                    </div>
+                    <input class='form-control' type='text' id='nome' name='nome'
+                        placeholder='Digite o nome completo da paciente' maxlength="50" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-lg-6 col-md-12">
+                    <label for='dt_nascimento'>Data de Nascimento</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                <i class="fas fa-calendar"></i>
+                            </span>
+                        </div>
+                        <input class='form-control' type='date' id='dt_nascimento' name='dt_nascimento' required>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6 col-md-12">
+                    <label for='idade'>Idade</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                <i class="fas fa-user"></i>
+                            </span>
+                        </div>
+                        <input class='form-control' type='number' id='idade' name='idade'
+                            placeholder='Digite a idade da paciente' required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-lg-6 col-md-12">
+                    <label for='cartao_sus'>Cartão SUS</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                <i class="fas fa-address-card"></i>
+                            </span>
+                        </div>
+                        <input class='form-control' id='cartao_sus' name='cartao_sus'
+                            placeholder='Digite a Cartão SUS da paciente' required>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6 col-md-12">
+                    <label for='dum'>Data da Última Menstruação</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                <i class="fas fa-calendar"></i>
+                            </span>
+                        </div>
+                        <input class='form-control' type='date' id='dum' name='dum' required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-lg-6 col-md-12">
+                    <label for='dpp'>Data Provável do Parto</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                <i class="fas fa-calendar"></i>
+                            </span>
+                        </div>
+                        <input class='form-control' type='date' id='dpp' name='dpp' required>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-lg-6 col-md-12">
+                    <label for='ig'>Idade Gestacional</label>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                <i class="fas fa-baby-carriage"></i>
+                            </span>
+                        </div>
+                        <input class='form-control' type='number' id='ig' name='ig'
+                            placeholder='Digite a idade gestacional da paciente' required>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-lg-12 col-md-12">
+                    <label>Parto</label><br>
+                    <!-- Material inline 1 -->
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="normal" name="parto" checked>
+                        <label class="form-check-label" for="normal">Normal</label>
+                    </div>
+
+                    <!-- Material inline 2 -->
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="cesarea" name="parto">
+                        <label class="form-check-label" for="cesarea">Cesárea</label>
+                    </div>
+
+                    <!-- Material inline 3 -->
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="forcepe" name="parto">
+                        <label class="form-check-label" for="forcepe">Forcepe</label>
+                    </div>
+
+                    <!-- Material inline 4 -->
+                    <div class="form-check form-check-inline">
+                        <input type="radio" class="form-check-input" id="aborto" name="parto">
+                        <label class="form-check-label" for="aborto">Aborto</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="card shadow">
+        <div class="card-header">
+            <legend>ESTRATIFICAÇÃO DE RISCO GESTACIONAL</legend>
+        </div>
+        <div class="card-body">
+            <input type="text" name="risco" placeholder="risco" hidden>
+            <div id="perguntas"></div>
+        </div>
+        <div class="card-footer">
+            <buttons>
+                <button class="btn btn-success hvr-grow" type="submit">
+                    <i class="fas fa-save"></i>
+                    Salvar
+                </button>
+            </buttons>
+            <alert class='lead'></alert>
+        </div>
+    </div>
+</form>
+
+<script src="js/cadastrar-ficha.js"></script>
