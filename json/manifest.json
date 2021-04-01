@@ -1,8 +1,8 @@
 {
-    "name": "SISCAD",
-    "short_name": "UI",
-    "theme_color": "#042f66",
-    "background_color": "#042f66",
+    "name": "RISCO GESTACIONAL",
+    "short_name": "RIGEST",
+    "theme_color": "#3b783b",
+    "background_color": "#5cb85c",
     "display": "standalone",
     "scope": "/index.html"
 }

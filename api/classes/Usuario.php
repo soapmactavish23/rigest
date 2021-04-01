@@ -112,7 +112,7 @@ class Usuario extends ConnectionDB {
 		$this->contato = $contato;
 		$this->cartao_sus = $cartao_sus;
 		$this->senha = md5(addslashes(@ $_REQUEST['senha']));
-		$this->permissao = "usuario";
+		$this->permissao = "home,cadastrar-ficha,consultar-ficha";
 
 		return $this->create();
 

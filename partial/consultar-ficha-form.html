@@ -1,0 +1,141 @@
+<form role="form">
+    <div class="modal-header">
+        <h4 class='modal-title'>
+            <span id="span-titulo" class='badge'></span>
+        </h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">&times;</button>
+    </div>
+    <div class="modal-body">
+        <div id="div-readonly required">
+            <div class="card shadow">
+                <div class="card-header">
+                    <legend>IDENTIFICAÇÃO DA PACIENTE</legend>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for='nome'>Nome</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input class='form-control' type='text' id='nome' name='nome'
+                                placeholder='Digite o nome completo da paciente' maxlength="50" readonly required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6 col-md-12">
+                            <label for='dt_nascimento'>Data de Nascimento</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                        <i class="fas fa-calendar"></i>
+                                    </span>
+                                </div>
+                                <input class='form-control' type='date' id='dt_nascimento' name='dt_nascimento' readonly
+                                    required>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6 col-md-12">
+                            <label for='idade'>Idade</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                </div>
+                                <input class='form-control' type='number' id='idade' name='idade'
+                                    placeholder='Digite a idade da paciente' readonly required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6 col-md-12">
+                            <label for='cartao_sus'>Cartão SUS</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                        <i class="fas fa-address-card"></i>
+                                    </span>
+                                </div>
+                                <input class='form-control cartao_sus' id='cartao_sus' name='cartao_sus'
+                                    placeholder='Digite a Cartão SUS da paciente' readonly required>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6 col-md-12">
+                            <label for='dum'>Data da Última Menstruação</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                        <i class="fas fa-calendar"></i>
+                                    </span>
+                                </div>
+                                <input class='form-control' type='date' id='dum' name='dum' readonly required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6 col-md-12">
+                            <label for='dpp'>Data Provável do Parto</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                        <i class="fas fa-calendar"></i>
+                                    </span>
+                                </div>
+                                <input class='form-control' type='date' id='dpp' name='dpp' readonly required>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-lg-6 col-md-12">
+                            <label for='ig'>Idade Gestacional</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text color-primary-icons" id="basic-addon1">
+                                        <i class="fas fa-baby-carriage"></i>
+                                    </span>
+                                </div>
+                                <input class='form-control' type='number' id='ig' name='ig'
+                                    placeholder='Digite a idade gestacional da paciente (EM SEMANAS)' readonly required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="card shadow">
+                <div class="card-header">
+                    <legend>ESTRATIFICAÇÃO DE RISCO GESTACIONAL</legend>
+                </div>
+                <div class="card-body">
+                    <input type="text" name="risco" placeholder="risco" hidden>
+                    <div id="respostas"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <buttons>
+            <!-- <button class="btn btn-primary hvr-grow" id="btn-editar" type="button">
+                <i class="fas fa-edit"></i>
+                Editar
+            </button>
+            <button class="btn btn-primary hvr-grow" id="btn-voltar" type="button">
+                <i class="fas fa-arrow-left"></i>
+                Voltar
+            </button>
+            <button class="btn btn-success hvr-grow" id="btn-salvar" type="submit">
+                <i class="fas fa-save"></i>
+                Salvar
+            </button> -->
+            <!-- 
+            <button class="btn btn-danger hvr-grow" id="btn-excluir" type="button">
+                <i class="fas fa-trash-alt"></i>
+                Excluir
+            </button> -->
+        </buttons>
+        <alert class='lead'></alert>
+    </div>
+</form>
+
+<script src='js/consultar-ficha-form.js'></script>

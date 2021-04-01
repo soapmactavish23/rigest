@@ -1,8 +1,8 @@
 <?php
 
-define('DB_DSN','mysql:host=localhost;dbname=rigest');
-define('DB_USER','root');
-define('DB_PASSWD','123456');
+define('DB_DSN','mysql:host=localhost;dbname=id16405986_rigest');
+define('DB_USER','id16405986_suporte');
+define('DB_PASSWD','Senh@d0$up0rt3');
 
 define('SMTP_HOST','smtp.gmail.com');
 define('SMTP_PORT',587);
